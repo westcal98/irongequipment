@@ -49,6 +49,13 @@ document.querySelectorAll('.faq-question').forEach(function(btn) {
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
   e.preventDefault();
   var form = e.target;
+  var submitBtn = form.querySelector('[type="submit"]');
+  var originalText = submitBtn.textContent;
+
+  if (submitBtn.disabled) return;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
   var inputs = form.querySelectorAll('input');
   var selects = form.querySelectorAll('select');
   var trailerVal = selects[0].value;
@@ -84,6 +91,8 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     }
   })
   .catch(function() {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
     alert("Something went wrong. Please call or text us directly at (405) 393-4161 and we'll get you sorted.");
   });
 });
