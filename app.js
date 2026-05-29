@@ -56,25 +56,26 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending...';
 
-  var inputs = form.querySelectorAll('input');
-  var selects = form.querySelectorAll('select');
-  var trailerVal = selects[0].value;
+  var trailerVal = document.getElementById('trailerSelect').value;
+  var contactPrefEl = form.querySelector('input[name="contactPref"]:checked');
 
   var payload = {
     type: trailerVal === 'Not sure — need advice' ? 'info' : 'rental',
-    name: inputs[0].value,
-    phone: inputs[1].value,
-    email: inputs[2].value,
-    city: inputs[3].value,
+    firstName: document.getElementById('firstName').value,
+    phone: document.getElementById('phone').value,
+    email: document.getElementById('email').value,
+    city: document.getElementById('city').value,
     trailer: trailerVal,
-    startDate: inputs[4].value,
-    duration: selects[1].value,
-    towVehicle: inputs[5].value,
-    hauling: inputs[6].value,
-    referral: selects[2].value,
-    notes: form.querySelector('textarea').value,
-    timestamp: new Date().toISOString(),
-    source: 'irongequipment.com'
+    startDate: document.getElementById('startDate').value,
+    startTime: document.getElementById('startTime').value,
+    endDate: document.getElementById('endDate').value,
+    endTime: document.getElementById('endTime').value,
+    towVehicle: document.getElementById('towVehicle').value,
+    hauling: document.getElementById('hauling').value,
+    contactPref: contactPrefEl ? contactPrefEl.value : '',
+    source: document.getElementById('source').value,
+    notes: document.getElementById('notes').value,
+    timestamp: new Date().toISOString()
   };
 
   fetch('https://irong-cc.westcal98.workers.dev/submit', {
@@ -114,9 +115,21 @@ window.addEventListener('scroll', function() {
   if (nav) nav.style.borderBottomColor = window.scrollY > 50 ? 'var(--steel)' : 'var(--border)';
 });
 
-// Set min date on start date input
+// Set min date on start/end date inputs
+var today = new Date().toISOString().split('T')[0];
 var dateInput = document.getElementById('startDate');
-if (dateInput) dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+if (dateInput) dateInput.setAttribute('min', today);
+var endDateInput = document.getElementById('endDate');
+if (endDateInput) endDateInput.setAttribute('min', today);
+
+// Sync end time to start time when start time changes
+var startTimeInput = document.getElementById('startTime');
+var endTimeInput = document.getElementById('endTime');
+if (startTimeInput && endTimeInput) {
+  startTimeInput.addEventListener('change', function() {
+    if (!endTimeInput.value) endTimeInput.value = startTimeInput.value;
+  });
+}
 
 // Service Worker registration
 if ('serviceWorker' in navigator) {
