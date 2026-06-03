@@ -16,6 +16,7 @@
   --white:#fff;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
+html,body{margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--black);color:var(--text);font-family:'Barlow',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;}
 .container{max-width:1100px;margin:0 auto;padding:0 20px;}
