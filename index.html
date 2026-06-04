@@ -246,6 +246,16 @@
               </select>
             </div>
           </div>
+          <!-- Availability Calendar -->
+          <div id="availabilityCalendar" class="avail-calendar-wrap" style="display:none;">
+            <div class="cal-mobile-nav">
+              <button type="button" id="calPrevBtn" class="cal-nav-btn">&#8249; Prev</button>
+              <span class="cal-mobile-title" id="calMobileTitle"></span>
+              <button type="button" id="calNextBtn" class="cal-nav-btn">Next &#8250;</button>
+            </div>
+            <div class="cal-months-wrap" id="calMonthsWrap"></div>
+          </div>
+          <div id="calendarStatus" class="cal-status"></div>
           <div class="form-row">
             <div class="form-group"><label class="form-label">Start Date *</label><input class="form-input" type="date" id="startDate" required></div>
             <div class="form-group"><label class="form-label">Start Time *</label><input class="form-input" type="time" id="startTime" required></div>
