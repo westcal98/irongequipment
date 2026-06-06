@@ -237,6 +237,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,8,8,.97);
   .hero-wm{align-items:center;}
   .hero-wm-line1,.hero-wm-line2{text-align:center;}
   .hero-logo{width:min(240px,58vw);}
+  .hero-wm-line1{white-space:normal !important; word-break:break-word !important; text-align:center !important;}
 }
 
 /* FAQ */
