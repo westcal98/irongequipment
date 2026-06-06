@@ -78,13 +78,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,8,8,.97);
 .hero-subtitle{font-size:18px;color:var(--muted);margin:24px auto 40px;max-width:520px;line-height:1.7;text-align:center;}
 .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px;justify-content:center;}
 .hero-divider{width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--steel) 30%,var(--steel) 70%,transparent);margin:32px auto 0;}
-
-/* HERO BRAND BLOCK */
-.hero-brand{display:inline-flex;align-items:center;justify-content:center;gap:28px;margin:0 auto 32px;}
-.hero-logo-img{width:130px;height:130px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 4px 28px rgba(91,158,201,0.2));}
-.hero-wordmark{display:flex;flex-direction:column;align-items:flex-start;line-height:1;}
-.hero-wm-irong{font-family:'Oswald',sans-serif;font-size:clamp(48px,7.5vw,92px);font-weight:700;text-transform:uppercase;letter-spacing:5px;color:#A8B8C4;line-height:1;white-space:nowrap;}
-.hero-wm-equipment{font-family:'Oswald',sans-serif;font-size:clamp(20px,3.2vw,42px);font-weight:600;text-transform:uppercase;letter-spacing:8px;color:#5B9EC9;margin-top:6px;white-space:nowrap;}
 .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:2px;max-width:520px;}
 .hero-stat{background:var(--dark);padding:20px;text-align:center;}
 .hero-stat-num{font-family:'Oswald',sans-serif;font-size:28px;font-weight:700;color:var(--steel);display:block;}
@@ -238,10 +231,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,8,8,.97);
   .cal-mobile-nav{display:flex;}
   .cal-month{display:none;}
   .cal-month.active{display:block;}
-  .hero-brand{flex-direction:column;align-items:center;gap:20px;}
-  .hero-wordmark{align-items:center;}
-  .hero-wm-irong,.hero-wm-equipment{text-align:center;white-space:normal;}
-  .hero-logo-img{width:100px;height:100px;}
+  .hero-logo-inner{flex-direction:column;gap:8px;align-items:center;}
 }
 
 /* FAQ */
