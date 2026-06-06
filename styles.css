@@ -65,10 +65,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,8,8,.97);
 @keyframes barPulse{0%,100%{opacity:.4;}50%{opacity:1;}}
 .hero-content{position:relative;z-index:2;padding:0 20px 48px;max-width:1100px;margin:0 auto;width:100%;text-align:center;}
 .hero-logo-strip{background:#000;width:100vw;margin-left:calc(-50vw + 50%);padding:24px 20px;margin-bottom:32px;display:flex;justify-content:center;align-items:center;}
-.hero-logo-inner{display:inline-flex;align-items:center;gap:16px;}
-.hero-logo{width:min(320px,75vw);height:auto;display:block;}
+.hero-logo-inner{display:inline-flex;align-items:center;justify-content:center;gap:32px;}
 .hero-logo-wrap{margin-bottom:24px;}
-.hero-logo{width:min(280px,70vw);height:auto;display:block;mix-blend-mode:screen;}
+.hero-logo{width:min(200px,45vw);height:auto;display:block;mix-blend-mode:screen;flex-shrink:0;}
+.hero-wm{display:flex;flex-direction:column;align-items:flex-start;line-height:1;}
+.hero-wm-line1{font-family:'Oswald',sans-serif;font-size:clamp(48px,7vw,88px);font-weight:700;text-transform:uppercase;letter-spacing:5px;color:#A8B8C4;line-height:1;white-space:nowrap;display:block;}
+.hero-wm-line2{font-family:'Oswald',sans-serif;font-size:clamp(20px,3vw,40px);font-weight:600;text-transform:uppercase;letter-spacing:8px;color:#5B9EC9;margin-top:8px;white-space:nowrap;display:block;}
 .hero-eyebrow{font-family:'Oswald',sans-serif;font-size:12px;color:var(--steel);letter-spacing:6px;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;justify-content:center;}
 
 .hero h1{font-family:'Oswald',sans-serif;font-size:clamp(48px,9vw,100px);font-weight:700;line-height:.95;text-transform:uppercase;color:var(--white);margin-bottom:8px;}
@@ -231,7 +233,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,8,8,.97);
   .cal-mobile-nav{display:flex;}
   .cal-month{display:none;}
   .cal-month.active{display:block;}
-  .hero-logo-inner{flex-direction:column;gap:8px;align-items:center;}
+  .hero-logo-inner{flex-direction:column;gap:16px;align-items:center;}
+  .hero-wm{align-items:center;}
+  .hero-wm-line1,.hero-wm-line2{text-align:center;}
+  .hero-logo{width:min(180px,60vw);}
 }
 
 /* FAQ */
