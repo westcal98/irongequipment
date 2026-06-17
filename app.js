@@ -144,8 +144,7 @@ function calDateStr(d) { return d.getFullYear() + '-' + calPad2(d.getMonth() + 1
 function calParseDate(s) { var p = s.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
 
 function calTrailerKey(val) {
-  if (val === '7×18 Utility Trailer') return 'utility';
-  if (val === '7×18 Car Hauler') return 'hauler';
+  if (val === '16×83 Utility Trailer') return 'utility';
   return null;
 }
 

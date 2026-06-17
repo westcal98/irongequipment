@@ -133,10 +133,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,8,8,.97);
 .hitch-note{display:flex;align-items:center;gap:8px;background:rgba(91,158,201,.08);border-left:3px solid var(--steel);padding:10px 12px;margin-top:14px;font-size:13px;color:var(--steel-light);}
 .trailer-best-for{font-size:13px;color:var(--muted);line-height:1.6;margin-top:16px;}
 .trailer-best-for strong{color:var(--chrome);}
+.trailer-gallery-main{width:100%;height:220px;object-fit:cover;border-radius:10px 10px 0 0;display:block;}
+.trailer-gallery-thumbs{display:flex;gap:6px;padding:8px;background:#111;border-radius:0 0 8px 8px;}
+.tg-thumb{width:60px;height:44px;object-fit:cover;border-radius:5px;cursor:pointer;opacity:0.6;border:2px solid transparent;transition:opacity 0.2s,border-color 0.2s;}
+.tg-thumb.active,.tg-thumb:hover{opacity:1;border-color:var(--steel);}
+.trailer-requirements{border:1px solid #c4841a;border-radius:10px;padding:14px 16px;margin:14px 0;background:rgba(196,132,26,0.08);font-size:13px;color:#e8a84a;line-height:1.8;}
+.trailer-requirements strong{color:#f0c070;display:block;margin-bottom:6px;font-size:14px;}
+.fleet-poll{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:32px;margin-top:40px;}
+.poll-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px;}
+.poll-option-btn{background:var(--black);border:1px solid var(--border);border-radius:10px;padding:16px;color:var(--text);font-size:15px;font-weight:600;cursor:pointer;transition:border-color 0.2s,background 0.2s;text-align:left;}
+.poll-option-btn:hover{border-color:var(--steel);background:var(--iron);}
+.poll-option-btn:disabled{opacity:0.5;cursor:not-allowed;}
 
 /* PRICING */
 .pricing-table{margin-top:48px;}
-.pricing-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:800px;margin:0 auto;}
+.pricing-cards{display:grid;grid-template-columns:1fr;gap:24px;max-width:420px;margin:0 auto;}
 .pricing-card{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden;}
 .pricing-card-header{background:var(--iron);padding:20px 24px;border-bottom:2px solid var(--steel);}
 .pricing-card-title{font-family:'Oswald',sans-serif;font-size:16px;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:2px;text-align:center;}
@@ -146,7 +157,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,8,8,.97);
 .pricing-row.highlight{background:rgba(91,158,201,.06);}
 .pricing-row-label{font-size:14px;color:var(--text);font-weight:500;}
 .pricing-row-value{font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;color:var(--steel);}
-@media(max-width:600px){.pricing-cards{grid-template-columns:1fr;}}
 .pricing-note{margin-top:20px;padding:8px 0;background:none;font-size:14px;color:var(--muted);line-height:1.6;text-align:center;}
 .pricing-note strong{color:var(--white);}
 
